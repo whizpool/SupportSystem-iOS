@@ -28,13 +28,13 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/uzair-whizpool/LogFilePod.git', :tag => s.version.to_s }
    s.social_media_url = 'https://www.facebook.com/danishalid2/'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'Classes/**/*.swift'
   s.swift_version = '5.0'
-  s.platform = {
-      "ios": "9.0"
-  }
+  #s.platform = {
+   #   "ios": "9.0"
+  #}
   
   # s.resource_bundles = {
   #   'LogFilePod' => ['LogFilePod/Assets/*.png']
