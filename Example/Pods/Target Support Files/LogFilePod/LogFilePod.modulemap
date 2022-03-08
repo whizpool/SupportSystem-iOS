@@ -1,0 +1,6 @@
+framework module LogFilePod {
+  umbrella header "LogFilePod-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - LogFilePod (0.1.0)
+
+DEPENDENCIES:
+  - LogFilePod (from `../`)
+
+EXTERNAL SOURCES:
+  LogFilePod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LogFilePod: 9c5ced1397acb27dab511858c03a8abe98857a30
+
+PODFILE CHECKSUM: c3c6145b62cc34cdbb6236ab8a864029662a1be8
+
+COCOAPODS: 1.11.2

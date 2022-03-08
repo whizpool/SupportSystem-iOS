@@ -1,0 +1,22 @@
+{
+  "name": "LogFilePod",
+  "version": "0.1.0",
+  "summary": "A short description of LogFilePod.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/uzair-whizpool/LogFilePod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "uzair-whizpool": "uzair.masood@whizpool.com"
+  },
+  "source": {
+    "git": "https://github.com/uzair-whizpool/LogFilePod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "LogFilePod/Classes/**/*"
+}
