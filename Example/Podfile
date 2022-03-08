@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'LogFilePod_Example' do
+  pod 'LogFilePod', :path => '../'
+
+  target 'LogFilePod_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
