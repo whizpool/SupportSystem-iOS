@@ -1,16 +1,24 @@
 PODS:
-  - LogFilePod (0.1.0)
+  - LogFilePod (0.1.0):
+    - SSZipArchive (~> 2.4.2)
+  - SSZipArchive (2.4.3)
 
 DEPENDENCIES:
   - LogFilePod (from `../`)
+  - SSZipArchive (~> 2.4.2)
+
+SPEC REPOS:
+  trunk:
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   LogFilePod:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LogFilePod: 9c5ced1397acb27dab511858c03a8abe98857a30
+  LogFilePod: 6054c33c355008f90b8a9430679fd69fe3de20e8
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
 
-PODFILE CHECKSUM: c3c6145b62cc34cdbb6236ab8a864029662a1be8
+PODFILE CHECKSUM: 221ae4aaf2cf762075a1777736da15531859c12b
 
 COCOAPODS: 1.11.2

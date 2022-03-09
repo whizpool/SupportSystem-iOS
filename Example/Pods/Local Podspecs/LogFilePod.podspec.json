@@ -1,8 +1,8 @@
 {
   "name": "LogFilePod",
   "version": "0.1.0",
-  "summary": "A short description of LogFilePod.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "This project will create a logfile and main record of logfile",
+  "description": "'This project will create a logfile and main record of logfile.just import this library and check this pod'",
   "homepage": "https://github.com/uzair-whizpool/LogFilePod",
   "license": {
     "type": "MIT",
@@ -15,8 +15,16 @@
     "git": "https://github.com/uzair-whizpool/LogFilePod.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://www.facebook.com/danishalid2/",
   "platforms": {
-    "ios": "9.0"
+    "ios": "13.0"
   },
-  "source_files": "LogFilePod/Classes/**/*"
+  "source_files": "Classes/**/*.swift",
+  "swift_versions": "5.0",
+  "dependencies": {
+    "SSZipArchive": [
+      "~> 2.4.2"
+    ]
+  },
+  "swift_version": "5.0"
 }
