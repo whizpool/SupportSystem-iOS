@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogFilePod'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'This project will create a logfile and main record of logfile'
 
 # This description is used to generate tags and improve search results.
