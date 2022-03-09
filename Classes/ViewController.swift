@@ -7,7 +7,7 @@
 
 import UIKit
 import MessageUI
-import SSZipArchive
+//import SSZipArchive
 
 class ViewController: UIViewController {
     
@@ -132,7 +132,7 @@ class ViewController: UIViewController {
     // close Button Action will close the main view
     @IBAction func close_btn_action(_ sender: UIButton) {
         main_dialogBox_view.isHidden = true
-        view.backgroundColor = UIColor.init(named: "gray5")
+        //view.backgroundColor = UIColor.init(named: "gray5")
     }
     
     // Email Button Show main view
@@ -236,7 +236,7 @@ class ViewController: UIViewController {
     // Function create zip and create password on it
     func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController)
     {
-        var isZipped:Bool = false
+        //var isZipped:Bool = false
         // calling combine all files into one file
         combineLogFiles()
         
@@ -245,22 +245,22 @@ class ViewController: UIViewController {
         // create a json file and call a function of makeJsonFile
         if FileManager.default.fileExists(atPath: contentsPath)
         {
-            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(SLog.shared.temp_zipFileName).path
+//            let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(SLog.shared.temp_zipFileName).path
             if SLog.shared.password.isEmpty{
-                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
+               // isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
             }
             else{
-                isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+               // isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
             }
             
-            if isZipped {
-                var data = NSData(contentsOfFile: createZipPath) as Data?
-                if let data = data
-                {
-                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: SLog.shared.zipFileName)
-                }
-                data = nil
-            }
+//            if isZipped {
+//                var data = NSData(contentsOfFile: createZipPath) as Data?
+//                if let data = data
+//                {
+//                    viewController.addAttachmentData(data, mimeType: "application/zip", fileName: SLog.shared.zipFileName)
+//                }
+//                data = nil
+//            }
         }
     }
     
