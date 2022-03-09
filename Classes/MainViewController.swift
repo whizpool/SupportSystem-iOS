@@ -9,7 +9,7 @@ import UIKit
 import MessageUI
 import SSZipArchive
 
-class MainViewController: UIViewController {
+public class MainViewController: UIViewController {
     
     // ********************* Outlets *********************//
     // MARK: - View controller Outlets
@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
     
     // ********************* ViewDidLoad *********************//
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         // dailog box hidden
@@ -316,7 +316,7 @@ class MainViewController: UIViewController {
 
 // Extension for mail composing delegate
 extension MainViewController:MFMailComposeViewControllerDelegate{
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error{
             controller.dismiss(animated: true, completion: nil)
         }
@@ -389,14 +389,14 @@ extension MainViewController:UITextViewDelegate{
     }
     
     // when textview is Editing
-    func textViewDidBeginEditing(_ textView: UITextView) {
+    public func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == prefilledTextviewText{
             textView.text = ""
         }
     }
     
     // when textview text is change
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n"{
             textView.resignFirstResponder()
         }
@@ -404,7 +404,7 @@ extension MainViewController:UITextViewDelegate{
     }
     
     // when textview text is end
-    func textViewDidEndEditing(_ textView: UITextView) {
+    public func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == ""{
             textView.text = prefilledTextviewText
         }
