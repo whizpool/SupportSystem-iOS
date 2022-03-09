@@ -53,7 +53,7 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7747A31FCB759C8DFAF2A47B78F50A95 /* Pods-LogFilePod_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogFilePod_Tests-Info.plist"; sourceTree = "<group>"; };
 		78C2370206F7AF13EFD8532463A2ACC6 /* Pods-LogFilePod_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7B06B3A4029BB914119930A77321696B /* Pods-LogFilePod_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LogFilePod_Tests"; path = Pods_LogFilePod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B06B3A4029BB914119930A77321696B /* Pods_LogFilePod_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogFilePod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		826DAD46EEB901C6F6EA251170663CA9 /* LogFilePod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LogFilePod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8EE54091CA4DD1E5963B5351138B4497 /* Pods-LogFilePod_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LogFilePod_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		90BCF6BCC719A98ED0029610E762DD35 /* Pods-LogFilePod_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		CFEF930D3B021843B3017A2031904698 /* Pods-LogFilePod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DC6C1CF08A3D6B998C87BB33359908D8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E0D4346394AE4E01997CD9DBBE8EA19D /* Pods-LogFilePod_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LogFilePod_Tests-dummy.m"; sourceTree = "<group>"; };
-		EADCEED4866A411775D27E01C73AE115 /* Pods-LogFilePod_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LogFilePod_Example"; path = Pods_LogFilePod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADCEED4866A411775D27E01C73AE115 /* Pods_LogFilePod_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogFilePod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA22001B27D753B000F205A9 /* SLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLog.swift; sourceTree = "<group>"; };
 		FE6E603140CC9DCF5E53724B4CABE4EA /* Pods-LogFilePod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FECE1433D31788B9C64584657304FA77 /* Pods-LogFilePod_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogFilePod_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				91D4FE44738684A4CA903C904075CF4B /* LogFilePod.framework */,
-				EADCEED4866A411775D27E01C73AE115 /* Pods-LogFilePod_Example */,
-				7B06B3A4029BB914119930A77321696B /* Pods-LogFilePod_Tests */,
+				EADCEED4866A411775D27E01C73AE115 /* Pods_LogFilePod_Example.framework */,
+				7B06B3A4029BB914119930A77321696B /* Pods_LogFilePod_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			);
 			name = "Pods-LogFilePod_Tests";
 			productName = Pods_LogFilePod_Tests;
-			productReference = 7B06B3A4029BB914119930A77321696B /* Pods-LogFilePod_Tests */;
+			productReference = 7B06B3A4029BB914119930A77321696B /* Pods_LogFilePod_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E7461646560585484AABD3F68EEFC598 /* Pods-LogFilePod_Example */ = {
@@ -314,7 +314,7 @@
 			);
 			name = "Pods-LogFilePod_Example";
 			productName = Pods_LogFilePod_Example;
-			productReference = EADCEED4866A411775D27E01C73AE115 /* Pods-LogFilePod_Example */;
+			productReference = EADCEED4866A411775D27E01C73AE115 /* Pods_LogFilePod_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +324,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					5EF35C9CAD250C27155B4A08C9D36F24 = {
 						LastSwiftMigration = 1320;
@@ -434,7 +434,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LogFilePod_Tests/Pods-LogFilePod_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LogFilePod_Tests/Pods-LogFilePod_Tests.modulemap";
@@ -467,7 +467,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LogFilePod/LogFilePod-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LogFilePod/LogFilePod-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LogFilePod/LogFilePod.modulemap";
 				PRODUCT_MODULE_NAME = LogFilePod;
@@ -476,7 +476,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -536,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -564,7 +564,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LogFilePod_Example/Pods-LogFilePod_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LogFilePod_Example/Pods-LogFilePod_Example.modulemap";
@@ -597,7 +597,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LogFilePod_Example/Pods-LogFilePod_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LogFilePod_Example/Pods-LogFilePod_Example.modulemap";
@@ -630,7 +630,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LogFilePod/LogFilePod-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LogFilePod/LogFilePod-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LogFilePod/LogFilePod.modulemap";
 				PRODUCT_MODULE_NAME = LogFilePod;
@@ -638,7 +638,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -696,7 +696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -722,7 +722,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-LogFilePod_Tests/Pods-LogFilePod_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LogFilePod_Tests/Pods-LogFilePod_Tests.modulemap";
