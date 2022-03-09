@@ -17,7 +17,6 @@
 		D5135715270D2F7D759B323540542682 /* LogFilePod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AD0CFB8A5F6400D255C9D815D85DC1 /* LogFilePod-dummy.m */; };
 		F61696B904B48367BE90E90F60752E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		FA22001C27D753B000F205A9 /* SLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22001B27D753B000F205A9 /* SLog.swift */; };
-		FA613F3F27D87B4800A8487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA613F3E27D87B4800A8487B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		E0D4346394AE4E01997CD9DBBE8EA19D /* Pods-LogFilePod_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LogFilePod_Tests-dummy.m"; sourceTree = "<group>"; };
 		EADCEED4866A411775D27E01C73AE115 /* Pods-LogFilePod_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LogFilePod_Example"; path = Pods_LogFilePod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA22001B27D753B000F205A9 /* SLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLog.swift; sourceTree = "<group>"; };
-		FA613F3E27D87B4800A8487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE6E603140CC9DCF5E53724B4CABE4EA /* Pods-LogFilePod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FECE1433D31788B9C64584657304FA77 /* Pods-LogFilePod_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogFilePod_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				FA22001B27D753B000F205A9 /* SLog.swift */,
-				FA613F3E27D87B4800A8487B /* ViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -391,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA613F3F27D87B4800A8487B /* ViewController.swift in Sources */,
 				FA22001C27D753B000F205A9 /* SLog.swift in Sources */,
 				D5135715270D2F7D759B323540542682 /* LogFilePod-dummy.m in Sources */,
 			);
