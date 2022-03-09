@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*.swift'
   s.swift_version = '5.0'
+  s.frameworks = 'UIKit'
+  s.dependency 'SSZipArchive', '~> 2.4.2'
   #s.platform = {
    #   "ios": "9.0"
   #}
@@ -41,6 +43,4 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'UIKit'
-   s.dependency 'SSZipArchive', '~> 2.4.2'
 end
