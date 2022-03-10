@@ -35,10 +35,9 @@ Pod::Spec.new do |s|
   #s.platform = {
    #   "ios": "9.0"
   #}
-  
-  # s.resource_bundles = {
-  #   'LogFilePod' => ['LogFilePod/Assets/*.png']
-  # }
+#   s.resource_bundles = {
+#     'LogFilePod' => ['LogFilePod/Resource/**/*NewMain.storyboard']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

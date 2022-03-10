@@ -54,8 +54,6 @@
 		F61696B904B48367BE90E90F60752E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
 		FA45B27002BCCF7B2C053CEBECFC9605 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD30157BC22B0A97147C1C9BE6645E /* MainViewController.swift */; };
 		FAB79D0CB575644AF95A1EA8FC1A2FEC /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */; };
-		FAD7A99A27D9BAD400313FD3 /* MainControllerXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7A99827D9BAD400313FD3 /* MainControllerXib.swift */; };
-		FAD7A99B27D9BAD400313FD3 /* MainControllerXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7A99927D9BAD400313FD3 /* MainControllerXib.xib */; };
 		FDFA762D220DB561440B0B5C619E362E /* mz_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
@@ -165,8 +163,6 @@
 		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
-		FAD7A99827D9BAD400313FD3 /* MainControllerXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainControllerXib.swift; path = Classes/MainControllerXib.swift; sourceTree = "<group>"; };
-		FAD7A99927D9BAD400313FD3 /* MainControllerXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainControllerXib.xib; path = Classes/MainControllerXib.xib; sourceTree = "<group>"; };
 		FE6E603140CC9DCF5E53724B4CABE4EA /* Pods-LogFilePod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FECE1433D31788B9C64584657304FA77 /* Pods-LogFilePod_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogFilePod_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,8 +277,6 @@
 		AAA13EFDF7A2A8093F825815DDCBF0D4 /* LogFilePod */ = {
 			isa = PBXGroup;
 			children = (
-				FAD7A99827D9BAD400313FD3 /* MainControllerXib.swift */,
-				FAD7A99927D9BAD400313FD3 /* MainControllerXib.xib */,
 				F2BD30157BC22B0A97147C1C9BE6645E /* MainViewController.swift */,
 				D19402AA876AAA215BD3E175D0B7D50F /* SLog.swift */,
 				F374D18788E4DC6DD9828896FD78EC9B /* Pod */,
@@ -574,7 +568,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD7A99B27D9BAD400313FD3 /* MainControllerXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +602,6 @@
 			files = (
 				3D9813F17B9B9661BAE76DACE3E6B8DB /* LogFilePod-dummy.m in Sources */,
 				FA45B27002BCCF7B2C053CEBECFC9605 /* MainViewController.swift in Sources */,
-				FAD7A99A27D9BAD400313FD3 /* MainControllerXib.swift in Sources */,
 				448DB75E312B1E515522CBD120D01957 /* SLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
