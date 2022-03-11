@@ -52,7 +52,8 @@
 		E7309050BB4212FE7B03BFD23488E32C /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = CBA7C727700C05AE10A909260EBFDF1F /* mz_crypt.c */; };
 		E94A7E96FC07B4E7854F41E54C0D7716 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3D0066B7B182ABB8273F4D905110E3 /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F61696B904B48367BE90E90F60752E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
-		FA45B27002BCCF7B2C053CEBECFC9605 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD30157BC22B0A97147C1C9BE6645E /* MainViewController.swift */; };
+		FA1424FC27DB153800AD34BB /* NewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1424FA27DB153800AD34BB /* NewController.swift */; };
+		FA1424FD27DB153800AD34BB /* NewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1424FB27DB153800AD34BB /* NewController.xib */; };
 		FAB79D0CB575644AF95A1EA8FC1A2FEC /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E58B001EB497987FD1DFF3DE32CC3F /* mz_strm_wzaes.c */; };
 		FDFA762D220DB561440B0B5C619E362E /* mz_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 813B931EBBD527AC2E04B07881966C70 /* mz_crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
@@ -159,10 +160,11 @@
 		E0D4346394AE4E01997CD9DBBE8EA19D /* Pods-LogFilePod_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LogFilePod_Tests-dummy.m"; sourceTree = "<group>"; };
 		EADCEED4866A411775D27E01C73AE115 /* Pods-LogFilePod_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LogFilePod_Example"; path = Pods_LogFilePod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0491C8B2D52E1908B91E4720EEFFEBB /* LogFilePod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LogFilePod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F2BD30157BC22B0A97147C1C9BE6645E /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/MainViewController.swift; sourceTree = "<group>"; };
 		F78F73AC1E27DF387460E6C9D3BFF7BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		F86615AF86FD3D110F4C387667DF2EAA /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		F9A27455BD782250AC63D8A94365E34D /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/include/ZipArchive.h; sourceTree = "<group>"; };
+		FA1424FA27DB153800AD34BB /* NewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewController.swift; path = Classes/NewController.swift; sourceTree = "<group>"; };
+		FA1424FB27DB153800AD34BB /* NewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewController.xib; path = Classes/NewController.xib; sourceTree = "<group>"; };
 		FE6E603140CC9DCF5E53724B4CABE4EA /* Pods-LogFilePod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogFilePod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FECE1433D31788B9C64584657304FA77 /* Pods-LogFilePod_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogFilePod_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,8 +279,9 @@
 		AAA13EFDF7A2A8093F825815DDCBF0D4 /* LogFilePod */ = {
 			isa = PBXGroup;
 			children = (
-				F2BD30157BC22B0A97147C1C9BE6645E /* MainViewController.swift */,
 				D19402AA876AAA215BD3E175D0B7D50F /* SLog.swift */,
+				FA1424FA27DB153800AD34BB /* NewController.swift */,
+				FA1424FB27DB153800AD34BB /* NewController.xib */,
 				F374D18788E4DC6DD9828896FD78EC9B /* Pod */,
 				FBB96694B8F9F6E3FDAB4E38F8CA5E18 /* Support Files */,
 			);
@@ -568,6 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1424FD27DB153800AD34BB /* NewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,8 +604,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1424FC27DB153800AD34BB /* NewController.swift in Sources */,
 				3D9813F17B9B9661BAE76DACE3E6B8DB /* LogFilePod-dummy.m in Sources */,
-				FA45B27002BCCF7B2C053CEBECFC9605 /* MainViewController.swift in Sources */,
 				448DB75E312B1E515522CBD120D01957 /* SLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
-//  LogFilePodProj
+//  NewController.swift
+//  LogFilePod
 //
-//  Created by Uzair Masood on 18/02/2022.
+//  Created by Macbook on 11/03/2022.
 //
 
 import UIKit
 import MessageUI
 import SSZipArchive
 
-public class MainViewController: UIViewController {
+public class NewController: UIViewController {
     
     // ********************* Outlets *********************//
     // MARK: - View controller Outlets
@@ -25,9 +25,6 @@ public class MainViewController: UIViewController {
     
     // main view outlet
     @IBOutlet var main_dialogBox_view: UIView!
-    
-    // Email Button Outlet
-    @IBOutlet var email_btn_outlet: UIButton!
     
     // Bugs TextView Outlet
     @IBOutlet var BugsTextview: UITextView!
@@ -68,6 +65,7 @@ public class MainViewController: UIViewController {
         
         // Textview Editing function
         textviewEditing()
+        NewControllerInitilizer()
     }
     
     // ********************* Actions *********************//
@@ -133,10 +131,10 @@ public class MainViewController: UIViewController {
     @IBAction func close_btn_action(_ sender: UIButton) {
         main_dialogBox_view.isHidden = true
         view.backgroundColor = UIColor.init(named: "gray5")
+        self.dismiss(animated: true, completion: nil)
     }
-    
-    // Email Button Show main view
-    @IBAction func email_log_action(_ sender: UIButton) {
+    func NewControllerInitilizer(){
+        
         main_dialogBox_view.isHidden = false
         view.backgroundColor = UIColor(white: 1, alpha: 0.4)
     }
@@ -231,8 +229,6 @@ public class MainViewController: UIViewController {
         
     }
     
-    
-    
     // Function create zip and create password on it
     func createPasswordProtectedZipLogFile(at logfilePath: String, composer viewController: MFMailComposeViewController)
     {
@@ -311,11 +307,10 @@ public class MainViewController: UIViewController {
     }
     
 }
-
 // ********************* Extensions *********************//
 
 // Extension for mail composing delegate
-extension MainViewController:MFMailComposeViewControllerDelegate{
+extension NewController:MFMailComposeViewControllerDelegate{
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error{
             controller.dismiss(animated: true, completion: nil)
@@ -338,7 +333,7 @@ extension MainViewController:MFMailComposeViewControllerDelegate{
 
 
 // Extension for Textview Editing or Delegate
-extension MainViewController:UITextViewDelegate{
+extension NewController:UITextViewDelegate{
     
     // setting textview, buttons colors and set app name to tittle label
     func textviewEditing(){
@@ -355,8 +350,6 @@ extension MainViewController:UITextViewDelegate{
         BugsTextview.backgroundColor = SLog.shared.backgroundColor
         
         // setting Email Button background color and tint color
-        email_btn_outlet.backgroundColor = UIColor.white
-        email_btn_outlet.tintColor  = SLog.shared.textColor
         BugsTextview.textColor = SLog.shared.textColor
         
         // Textview Border or corner radius
@@ -422,14 +415,10 @@ extension MainViewController:UITextViewDelegate{
         skip_btn_outlet.layer.borderColor = BorderColor.cgColor
         
         main_dialogBox_view.backgroundColor = backgroundColor
-        
-        email_btn_outlet.tintColor = textColor
-        email_btn_outlet.backgroundColor = backgroundColor
-        email_btn_outlet.layer.borderColor = BorderColor.cgColor
+
         
         BugsTextview.textColor = textColor
         BugsTextview.backgroundColor = backgroundColor
         BugsTextview.layer.borderColor = BorderColor.cgColor
     }
 }
-

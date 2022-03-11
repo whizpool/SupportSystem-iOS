@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BB5D5E623585EE211C57E861 /* Pods_LogFilePod_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A3D0F5A980C829A81533B7 /* Pods_LogFilePod_Tests.framework */; };
+		FA14260D27DB61DC00AD34BB /* NewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA14260C27DB61DC00AD34BB /* NewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C6A3D0F5A980C829A81533B7 /* Pods_LogFilePod_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogFilePod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBAC686229452B923C493AD /* LogFilePod.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LogFilePod.podspec; path = ../LogFilePod.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F7DB794D5F45E2D605A1F795 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FA14260C27DB61DC00AD34BB /* NewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewController.xib; path = ../Classes/NewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				FA14260C27DB61DC00AD34BB /* NewController.xib */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for LogFilePod */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA14260D27DB61DC00AD34BB /* NewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

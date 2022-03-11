@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogFilePod'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'This project will create a logfile and main record of logfile'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,17 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*.swift'
   s.swift_version = '5.0'
+  s.resources = 'Classes/**/*.xib'
+#  s.resource_bundles = {
+#      'LogFilePod' => [
+#          'Pod/Classes/**/*.xib'
+#      ]
+#    }
   #s.platform = {
    #   "ios": "9.0"
   #}
 #   s.resource_bundles = {
-#     'LogFilePod' => ['LogFilePod/Resource/**/*NewMain.storyboard']
+#     'LogFilePod' => ['LogFilePod/classes/NewController.xib,NewController.swift']
 #   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

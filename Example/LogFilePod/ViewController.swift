@@ -15,9 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func Click_action(_ sender: UIButton) {
+        let secondView = NewController(nibName: "NewController", bundle: nil)
+        secondView.modalPresentationStyle = .fullScreen
+        self.present(secondView, animated: true, completion: nil)
     }
     
 }

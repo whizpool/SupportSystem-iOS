@@ -18,7 +18,29 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLg-hV-HbD">
+                                <rect key="frame" x="132" y="418" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.89797717330000004" green="0.89766913650000002" blue="0.91844183209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4wA-sy-3pH"/>
+                                    <constraint firstAttribute="width" constant="150" id="Lra-Jc-7G5"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Click_action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p9B-Lk-zRp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qLg-hV-HbD" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RT0-I3-Ihd"/>
+                            <constraint firstItem="qLg-hV-HbD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="js3-WE-gGQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
