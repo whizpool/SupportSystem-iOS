@@ -29,6 +29,9 @@ public class NewController: UIViewController {
     // Bugs TextView Outlet
     @IBOutlet var BugsTextview: UITextView!
     
+    // Close Btn outlet
+    @IBOutlet var close_btn_outlet: UIButton!
+    
     // ********************* Variables *********************//
     
     // zip folder path
@@ -51,21 +54,12 @@ public class NewController: UIViewController {
         // dailog box hidden
         main_dialogBox_view.isHidden = true
         
-        // initilization and create Folder in Directory
-        SLog.shared.initilization()
-        
-        // Write Logs in Logs File with message
-        SLog.shared.log(text: "Hello Buddy")
-        SLog.shared.log(text: "Hi")
-        SLog.shared.log(text: "Yes Please")
-        SLog.shared.log(text: "No")
-        
-        // function Textview Editing Calls
-        SLog.shared.setpassword(password: "QWERTY")
-        
         // Textview Editing function
         textviewEditing()
+        
+        // calling function of NewControllerInitilizer() for showing main view
         NewControllerInitilizer()
+        
     }
     
     // ********************* Actions *********************//
@@ -135,8 +129,10 @@ public class NewController: UIViewController {
     }
     func NewControllerInitilizer(){
         
+        close_btn_outlet.setTitle("", for: .normal)
         main_dialogBox_view.isHidden = false
-        view.backgroundColor = UIColor(white: 1, alpha: 0.4)
+        //view.backgroundColor = UIColor(white: 1, alpha: 0.4)
+        view.backgroundColor = UIColor.init(white: 0.7, alpha: 0.7)
     }
     
     // ********************* Functions *********************//
