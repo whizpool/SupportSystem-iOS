@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*.swift'
   s.swift_version = '5.0'
-  s.resources = 'Classes/**/*.xib'
+  s.resources = 'Classes/**/*.{xib,xcassets,close}'
 #  s.resource_bundles = {
 #      'LogFilePod' => [
 #          'Pod/Classes/**/*.xib'

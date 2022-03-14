@@ -157,7 +157,7 @@ public class SLog{
        }
     
     // Function For checking files are greater than (KEEP_OLD_LOGS_UP_TO_DAYS) or not and call function for deleting files
-    func deleteOldLogs(forcefullyDelete: Bool) -> Bool
+    public func deleteOldLogs(forcefullyDelete: Bool) -> Bool
         {
             let fileManager:FileManager = FileManager.default
             let fileList = listFilesFromDocumentsFolder()
