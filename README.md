@@ -49,6 +49,34 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+## Log Levels
+
+The following log levels are supported:
+
+ - `Debug`
+ - `Info`
+ - `Warning`
+ - `Error`
+ - `Message`
+
+## Let's log
+
+```swift
+ 1) let's import the logging API package
+import SupportSdk
+
+ 2) initilization Sdk
+SLog.shared.initilization()
+
+ 3) we're now ready to use it
+SLog.shared.log(text: "Hello World!!")
+```
+
+## Output
+
+```
+2022-03-02 15:12:19.507 Hello World!!
+
 ## Installation
 
 LogFilePod is available through [CocoaPods](https://cocoapods.org). To install
@@ -61,6 +89,10 @@ pod 'LogFilePod'
 ## Author
 
 uzair-whizpool, uzair.masood@whizpool.com
+
+# Contact-Info
+
+If you wish to contact us, email at: info@whizpool.com
 
 ## License
 
