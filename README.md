@@ -49,6 +49,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+## Installation
+
+LogFilePod is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'LogFilePod'
+```
+
 ## Log Levels
 
 The following log levels are supported:
@@ -62,38 +71,32 @@ The following log levels are supported:
 ## Let's log
 
 ```swift
- 1) let's import the logging API package
+ // let's import the logging API package
 import SupportSdk
 
- 2) initilization Sdk
+ // initilization Sdk
 SLog.shared.initilization()
 
- 3) we're now ready to use it
+ // we're now ready to use it
 SLog.shared.log(text: "Hello World!!")
 ```
 
-## Output
+# Output
 
 ```
 2022-03-02 15:12:19.507 Hello World!!
 
-## Installation
-
-LogFilePod is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'LogFilePod'
 ```
 
 ## Author
 
 uzair-whizpool, uzair.masood@whizpool.com
 
-# Contact-Info
+## Contact-Info
 
 If you wish to contact us, email at: info@whizpool.com
 
 ## License
 
 LogFilePod is available under the MIT license. See the LICENSE file for more info.
+
