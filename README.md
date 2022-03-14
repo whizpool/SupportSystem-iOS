@@ -75,7 +75,7 @@ The following log levels are supported:
 
 ```swift
  // let's import the logging API package
-import SupportSdk
+import LogFilePod
 
  // initilization Sdk
 SLog.shared.initilization()
