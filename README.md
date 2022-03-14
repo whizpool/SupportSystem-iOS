@@ -9,6 +9,21 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Features
+
+ 1) create new log file Everyday with current date name.
+ 2) compress zip and Make password on it.
+ 3) Delete old files depending on the no. of days provided to it
+ 4) Display a screen which take textual input from user about the issue they are facing
+ 5) The theme of screen should be customizable
+ 6) The send-to email should be provided by program
+ 7) A JSON file should also get attached with following information:
+        -> Device manufacturer
+        -> Device model
+        -> OS installed on device
+        -> Currently running app version
+        -> Free storage space available
+
 ## Usage
 
         // initilization sdk
