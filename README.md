@@ -88,14 +88,6 @@ SLog.shared.log(text: "Hello World!!")
 
 ```
 
-## Author
-
-uzair-whizpool, uzair.masood@whizpool.com
-
-## Contact-Info
-
-If you wish to contact us, email at: info@whizpool.com
-
 ## License
 
 LogFilePod is available under the MIT license. See the LICENSE file for more info.
