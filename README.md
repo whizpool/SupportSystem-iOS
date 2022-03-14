@@ -46,6 +46,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         
         // delete logs files forcefully
         SLog.shared.deleteOldLogs(forcefullyDelete: true)
+        
+        // Open Main View for Mailing Log Files on Button Action
+        let amazingBundle = Bundle(for: NewController.self)
+        let secondView = NewController(nibName: "NewController", bundle: amazingBundle)
+        secondView.modalPresentationStyle = .fullScreen
+        self.present(secondView, animated: true, completion: nil)
 
 ## Requirements
 
