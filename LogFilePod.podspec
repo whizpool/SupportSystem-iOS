@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogFilePod'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = 'This project will create a logfile and main record of logfile'
 
 # This description is used to generate tags and improve search results.
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 'This project will create a logfile and main record of logfile.just import this library and check this pod'
                        DESC
 
-  s.homepage         = 'https://github.com/uzair-whizpool/LogFilePod'
+  s.homepage         = 'https://github.com/whizpool/SupportSystem-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'uzair-whizpool' => 'uzair.masood@whizpool.com' }
-  s.source           = { :git => 'https://github.com/uzair-whizpool/LogFilePod.git', :tag => s.version.to_s }
-   s.social_media_url = 'https://www.facebook.com/danishalid2/'
+  s.author           = { 'Whizpool' => 'usman.nisar@whizpool.com' }
+  s.source           = { :git => 'https://github.com/whizpool/SupportSystem-iOS.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://www.facebook.com/whizpool/'
 
   s.ios.deployment_target = '13.0'
 

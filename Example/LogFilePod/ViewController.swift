@@ -36,10 +36,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Click_action(_ sender: UIButton) {
-        let amazingBundle = Bundle(for: NewController.self)
-        let secondView = NewController(nibName: "NewController", bundle: amazingBundle)
-        secondView.modalPresentationStyle = .fullScreen
-        self.present(secondView, animated: true, completion: nil)
+//        let amazingBundle = Bundle(for: NewController.self)
+//        let secondView = NewController(nibName: "NewController", bundle: amazingBundle)
+//        secondView.modalPresentationStyle = .fullScreen
+//        self.present(secondView, animated: true, completion: nil)
+        
+        SLog.shared.getLogFilePath { zipPath in
+            //
+            print("zippath: \(zipPath)")
+        }
     }
     
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SSZipArchive
 
 public class SLog{
     
@@ -54,8 +55,8 @@ public class SLog{
     // app Build number variable
     private var buildNo:Int64 = 0
     
-    // send by default email of developer
-    var sendToEmail: String = "uzair.masood@whizpool.com"
+    // send by default email of developer: set your email that you want to receive email on
+    var sendToEmail: String = ""
     
     // after combine log file name
     var finalLogFileName_After_Combine = "finalLog"
@@ -68,6 +69,18 @@ public class SLog{
     
     // json file name
     var jsonFileName = "myJsonFile"
+    
+    // zip folder path
+    var appendZipFolderPath = "/NewZip"
+    
+    // log folder path
+    var appendRootFolderPath = "Logs/"
+    
+    // Email Subject for mail composer
+    var emailSubject = "Email Sends To Developers"
+    
+    // Textview Placeholder
+    var prefilledTextviewText = "Write here about your bug detail"
     
     // ********************* initilization *********************//
     
@@ -111,6 +124,237 @@ public class SLog{
             _ = deleteOldLogs(forcefullyDelete: false)
         }
     
+    // ********************* Functions *********************//
+    
+   
+    // Function to get path of LogZipfile
+    public func getLogFilePath (completion: (String) -> ())
+    {
+        let filePath = SLog.shared.getRootDirPath()
+        let url = URL(string: filePath)
+        let zipPath = url!.appendingPathComponent(SLog.shared.appendZipFolderPath)
+        do {
+            self.createPasswordProtectedZipLogFile(at: zipPath.path) { path in
+                
+                completion(path)
+            }
+        }
+//        catch let error as NSError
+//        {
+//            print("Unable to create directory \(error.debugDescription)")
+//            completion("")
+//        }
+//
+    }
+    
+    // combine two files into one and set that file name is finalLog and at the end we can call makeJsonFile function which will create json file
+    func combineLogFiles(completion: (String) -> ()){
+        
+        // Delete Zip Folder
+        _ = SLog.shared.deleteFile(fileName: SLog.shared.LOG_FILE_New_Folder_DIR_NAME)
+        
+        let fileManager = FileManager.default
+        var files = [String]()
+        files.removeAll()
+        
+        // getting files from Slog Function
+        files = SLog.shared.listFilesFromDocumentsFolder()
+        
+        // arrange Files in orderedAscending
+        files = files.sorted(by: { $0.compare($1) == .orderedAscending })
+        for file in files{
+            //if you get access to the directory
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                
+                //prepare file url
+                let fileURL = dir.appendingPathComponent(appendRootFolderPath)
+                
+                let DirPath = fileURL.appendingPathComponent(SLog.shared.LOG_FILE_New_Folder_DIR_NAME)
+                do
+                {
+                    try FileManager.default.createDirectory(atPath: DirPath.path, withIntermediateDirectories: true, attributes: nil)
+                }
+                catch let error as NSError
+                {
+                    print("Unable to create directory \(error.debugDescription)")
+                }
+                print("Dir Path = \(DirPath)")
+                
+                let newZipDirURL = fileURL.appendingPathComponent(file)
+                let fileCombine = DirPath.appendingPathComponent(SLog.shared.finalLogFileName_After_Combine)
+                
+                do{
+                    var result = ""
+                    result = try String(contentsOf: newZipDirURL, encoding: .utf8)
+                    print(result)
+                    if fileManager.fileExists(atPath: fileCombine.path){
+                        
+                        do {
+                            if fileManager.fileExists(atPath: fileCombine.path) {
+                                // File Available
+                                if let fileUpdater = try? FileHandle(forUpdating: fileCombine) {
+                                    // Function which when called will cause all updates to start from end of the file
+                                    fileUpdater.seekToEndOfFile()
+                                    
+                                    // Which lets the caller move editing to any position within the file by supplying an offset
+                                    fileUpdater.write(result.data(using: .utf8)!)
+                                    
+                                    // Once we convert our new content to data and write it, we close the file and that’s it!
+                                    fileUpdater.closeFile()
+                                    
+                                    completion(fileCombine.path)
+                                }
+                            }
+                        }
+//                        catch{
+//                            print(error.localizedDescription)
+//                            completion("")
+//                        }
+                    }
+                    else{
+                        
+                        if (FileManager.default.createFile(atPath: fileCombine.path, contents: nil, attributes: nil)) {
+                            print("File created successfully.")
+                            do{
+                                try result.write(to: fileCombine, atomically: true, encoding: String.Encoding.utf8)
+    
+                                let pathURL = fileCombine // URL
+                                let pathString = pathURL.path // String
+                        
+                                completion(pathString)
+                            }
+                            catch{
+                                print(error.localizedDescription)
+                                completion("")
+                            }
+                        }
+                    }
+                }catch{
+                    print(error.localizedDescription)
+                    completion("")
+                }
+            }
+        }
+    }
+    
+    // Function create zip and create password on it
+    func createPasswordProtectedZipLogFile(at logfilePath: String, completion: (String) -> ())
+    {
+        var isZipped:Bool = false
+        // calling combine all files into one file
+        self.combineLogFiles { filePath in
+            //
+            self.makeJsonFile { jsonFilePath in
+                //
+                let contentsPath = logfilePath
+                
+                // create a json file and call a function of makeJsonFile
+                if FileManager.default.fileExists(atPath: contentsPath)
+                {
+                    let createZipPath = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(SLog.shared.temp_zipFileName).path
+                    if SLog.shared.password.isEmpty{
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath)
+                    }
+                    else{
+                        isZipped = SSZipArchive.createZipFile(atPath: createZipPath, withContentsOfDirectory: contentsPath, keepParentDirectory: true, withPassword: SLog.shared.password)
+                    }
+                    
+                    let zipPath = ((contentsPath as NSString).deletingLastPathComponent as NSString).appendingPathComponent(SLog.shared.zipFileName)
+                    
+                    do {
+
+                        if isZipped {
+                            //
+                            if FileManager.default.fileExists(atPath: zipPath)
+                            {
+                                try FileManager.default.removeItem(atPath: zipPath)
+                            }
+                            
+                            try FileManager.default.copyItem(atPath: createZipPath, toPath: zipPath)
+                            
+                            completion(zipPath)
+                        }
+                        else
+                        {
+                            completion("")
+                        }
+                    }
+                    catch{
+                        print(error.localizedDescription)
+                        completion("")
+                    }
+                }
+                else
+                {
+                    completion("")
+                }
+            }
+        }
+    }
+    
+    // Fuction make Json file
+    func makeJsonFile(completion: (String) -> ()){
+        // -> URL
+        
+        // create empty dict
+        var myDict = [String: String]()
+        
+        // calling function of manufacture,deviceModel,OSInstalled,appVersion and set that functions value in dict
+        let manufacture = SLog.getDeviceManufacture()
+        let deviceModel = UIDevice.modelName
+        let OSInstalled = SLog.getOSInfo()
+        let appVersion = SLog.getVersionName()
+        var freeSpace:String = ""
+        
+        // calculate free space of device
+        if let Space = SLog.deviceRemainingFreeSpaceInBytes() {
+            print("free space: \(Space)")
+            print(Units(bytes: Space).getReadableUnit())
+            freeSpace = Units(bytes: Space).getReadableUnit()
+        } else {
+            print("failed")
+        }
+        
+        // Add Values in Dict
+        myDict = ["appVersion":appVersion,"OSInstalled":OSInstalled,"deviceModel":deviceModel,"manufacture":manufacture,"freeSpace":freeSpace]
+        do{
+//            try  saveJsonFileInDirectory(jsonObject: myDict, toFilename: SLog.shared.jsonFileName)
+            try saveJsonFileInDirectory(jsonObject: myDict, toFilename: SLog.shared.jsonFileName, completion: { filePath in
+                completion(filePath)
+            })
+        }catch{
+            print(error.localizedDescription)
+            completion("")
+        }
+        
+    }
+    
+    // create json file in directory with specific information of device
+   
+    func saveJsonFileInDirectory(jsonObject: Any, toFilename filename: String, completion: (String) -> ()) throws{
+        let fm = FileManager.default
+        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+        if let url = urls.first {
+            var fileURL = url.appendingPathComponent(appendRootFolderPath)
+            let zipFolder = fileURL.appendingPathComponent("NewZip/")
+            let zipFolderUrl = zipFolder.appendingPathComponent(filename)
+            fileURL = zipFolderUrl.appendingPathExtension("json")
+            let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [.prettyPrinted])
+            
+            do {
+                try data.write(to: fileURL, options: [.atomicWrite])
+             
+                completion(fileURL.path)
+            }
+            catch {
+                completion("")
+            }
+       }
+       else
+       {
+           completion("")
+       }
+    }
     // ********************* Functions *********************//
     
     // this function is used for writing logs in log file

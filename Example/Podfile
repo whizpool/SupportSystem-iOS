@@ -9,6 +9,7 @@ target 'LogFilePod_Example' do
   target 'LogFilePod_Tests' do
     inherit! :search_paths
 
+
     
   end
 end

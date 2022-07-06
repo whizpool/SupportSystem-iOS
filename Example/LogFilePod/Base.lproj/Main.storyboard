@@ -27,10 +27,10 @@
                                     <constraint firstAttribute="height" constant="60" id="4wA-sy-3pH"/>
                                     <constraint firstAttribute="width" constant="150" id="Lra-Jc-7G5"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.81034165989999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Click">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="Click_action:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p9B-Lk-zRp"/>
